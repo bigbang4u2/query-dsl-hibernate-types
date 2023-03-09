@@ -1,5 +1,10 @@
 Hibernate-Types extensions for QueryDSL APT
 ======
+## NOTE: 
+
+This repository is forked from https://github.com/jwgmeligmeyling/hibernate-types-querydsl-apt but runs with both
+**gradle** and **maven**. It will generate QTypes using both gradle and maven
+
 
 Extensions for QueryDSL APT to map entity properties mapped with [Hibernate-Types](https://github.com/vladmihalcea/hibernate-types).
 Hibernate-Types makes fills in the gap between the Java Persistence API and modern Java ecosystems.
@@ -54,9 +59,17 @@ For more examples, look at the following test cases:
 * [`MonetaryAmountPathTest`](querydsl-ext-testsuite/src/test/java/com/pallasathenagroup/querydsl/MonetaryAmountPathTest.java) - for dealing with monetary amounts;
 * [`HstorePathTest`](querydsl-ext-testsuite/src/test/java/com/pallasathenagroup/querydsl/HstorePathTest.java) - for dealing with HSTORE fields.
 
-# Maven configuration
+# Gradle
+```shell
+./gradlew clean build
+```
+# Maven 
 Note: this configuration is for Querydsl 5.0 and above. For earlier versions of Querydsl, use `hibernate-types-querydsl-apt:1.1.0` instead.
-
+### Build
+```shell
+mvn clean install
+```
+### Configuration
 ```xml
 <dependencies>
     <dependency>

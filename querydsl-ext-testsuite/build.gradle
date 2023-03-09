@@ -3,9 +3,12 @@
  */
 
 dependencies {
+    annotationProcessor project(':querydsl-ext-apt')
+    annotationProcessor project(':querydsl-ext-api')
+    annotationProcessor project(':querydsl-ext-impl')
+    implementation project(':querydsl-ext-apt')
     implementation project(':querydsl-ext-api')
     implementation project(':querydsl-ext-impl')
-    implementation project(':querydsl-ext-apt')
 
     annotationProcessor group: 'javax.annotation', name: 'javax.annotation-api', version: '1.3.2'
     annotationProcessor group: 'org.hibernate.javax.persistence', name: 'hibernate-jpa-2.1-api', version: '1.0.2.Final'
